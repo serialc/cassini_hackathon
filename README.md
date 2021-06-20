@@ -8,4 +8,4 @@ This is an ongoing work - visit us again.
 
 ## Some resources
 
-[Webmap](green_attributes_project/web/)
+[Webmap](https://serialc.github.io/cassini_hackathon/green_attributes_project/web/)
