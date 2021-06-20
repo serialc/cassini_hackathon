@@ -4,6 +4,7 @@ Not all green spaces are equal. Our project, GreenAttributes, defines the qualit
 
 # Introductory video
 [YouTube](https://youtu.be/IZqi-YX6IoU)
+[![GreenAttributes](https://img.youtube.com/vi/IZqi-YX6IoU/0.jpg)](https://www.youtube.com/watch?v=IZqi-YX6IoU)
 
 ## The process
 
