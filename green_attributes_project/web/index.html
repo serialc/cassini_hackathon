@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>GreenAttributes</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js"></script>
+<style>
+body { margin: 10px; padding: 0; }
+#map { width: 800px; height: 600px; }
+
+.map-overlay {
+  position: absolute;
+  right: 0;
+  z-index: 1999;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+#features {
+  top: 0;
+  width: 250px;
+}
+
+#legend {
+  bottom: 0;
+  margin-bottom: 40px;
+  width: 100px;
+}
+
+.legend-key {
+  display: inline-block;
+  border-radius: 20%;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+}
+</style>
+</head>
+<body>
+
+  <h1>GreenAttributes</h1>
+  <p>Select city to view attributes map: <input value='LUXEMBOURG'></p>
+  <!-- need to build interaction into input -->
+
+  <p>Below shows the green spaces (in black for contrast) contained in 100m resolution Urban Atlas data for comparison with forthcoming Sentinel sourced vegetation attribute values.</p>
+
+<div id="map">
+  <div id="legend" class="map-overlay">
+    <div>
+      <span class="legend-key" style="background-color: black;"></span>
+      <span>Urban Atlas green spaces</span>
+    </div>
+  </div>
+</div>
+<script>
+
+mapboxgl.accessToken = 'pk.eyJ1IjoiY3lyaWxsZW1kYyIsImEiOiJjaXl0NzJkeGQwMDI3MnFwbDN5eHZyY3I4In0.wJYBQYQyeLwQRd4m8r9mQQ';
+
+var map = new mapboxgl.Map({
+container: 'map', // container id
+style: 'mapbox://styles/cyrillemdc/ckq4xgqoa0il618p3uktq33cg',
+center: [6.14, 49.61],
+zoom: 12 // starting zoom
+});
+
+map.on('load', function() {
+
+
+  map.addSource("uagreen", {
+    "type": "image",
+    "url": "some_green_alpha.gif",
+    "coordinates": [
+        // t: 49.656237, r: 6.207471, b: 49.559514, l: 6.064337
+        [6.064337, 49.656237],
+        [6.207471, 49.656237],
+        [6.207471, 49.559514],
+        [6.064337, 49.559514]
+    ]
+  });
+
+  map.addLayer({
+    "id": "overlay",
+    "source": "uagreen",
+    "type": "raster"
+  })
+
+});
+
+
+</script>
+ 
+</body>
+</html>
