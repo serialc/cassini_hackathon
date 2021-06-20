@@ -9,3 +9,10 @@ This is an ongoing work - visit us again.
 ## Some resources
 
 [Webmap](https://serialc.github.io/cassini_hackathon/green_attributes_project/web/)
+
+## Team
+
+- Marlène Boura
+- Paul Kilgarriff
+- Sylvain Klein
+- Cyrille Médard de Chardon
