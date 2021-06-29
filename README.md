@@ -2,6 +2,10 @@
 
 Not all green spaces are equal. Our project, GreenAttributes, defines the quality and attributes of green spaces, allowing urban planners to make better decisions.
 
+# The team at work
+
+![Picture of the four team members at work](team_at_work.png)
+
 # Introductory video
 [![GreenAttributes](https://img.youtube.com/vi/XrKeWp6NMkE/0.jpg)](https://www.youtube.com/watch?v=XrKeWp6NMkE)
 
